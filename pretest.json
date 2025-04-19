@@ -1,0 +1,52 @@
+
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Which of the following best describes the concept of a metapopulation?",
+      "answers": {
+        "a": "A population that has become spatially subdivided",
+        "b": "A network of distinct and non-interacting species",
+        "c": "An assemblage of populations of different species living in the same geographic location at the same time",
+        "d": "A population in an urban area"
+      },
+ 
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },   
+
+
+    {
+      "question": "2. In Levins model d, the dispersal is the ________________",
+      "answers": {
+        "a": "Degree to which the environments of the two subpopulations vary with regards to each other",
+        "b": "Initial number of individuals in the population",
+        "c": "Population growth rate in good years",
+        "d": "Probability that the individual disperse from its sub population"
+      },
+      
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+    
+    {
+      "question": "3. Populations of ________ and ___________are good examples of metapopulation.",
+      "answers": {
+        "a": "Butterflies and coral-reef fishes",
+        "b": "Ground squirrels and Logger head turtle",
+        "c": "Moths and Tawny elk",
+        "d": "Deer and Frogs"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}	 
+	 
+	 
+
+ 	 
+
+
