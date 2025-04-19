@@ -3,43 +3,43 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. ",
+      "question": "1. The value of d equal to or greater than ____, the two populations completely mixed, the population is considered as single population rater than two subpopulations.",
       "answers": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "0.1",
+        "b": "0.9",
+        "c": "0.05",
+        "d": "0.5"
       },
  
-      "correctAnswer": "a",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },   
 
 
     {
-      "question": "2. ",
+      "question": "2. Populations of ________ and ___________are good examples of metapopulation.",
       "answers": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "Butterflies and coral-reef fishes",
+        "b": "Ground squirrels and Logger head turtle",
+        "c": "Moths and Tawny elk",
+        "d": "Deer and Frogs"
       },
       
-      "correctAnswer": "b",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
 
     
     {
-      "question": "3. ",
+      "question": "3. I (Independent) is the ____________.",
       "answers": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
+        "a": "Probability that the individual disperse from its sub population",
+        "b": "Degree to which the environments of the two subpopulations vary with regards to each other",
+        "c": "Initial number of individuals in the population",
+        "d": "Population growth rate in good years"
       },
      
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
