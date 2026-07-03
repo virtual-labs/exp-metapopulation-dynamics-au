@@ -1,0 +1,13 @@
+
+/home/runner/work/exp-metapopulation-dynamics-au/exp-metapopulation-dynamics-au/experiment/simulation/js/main.js
+  77:10  warning  'play' is defined but never used         no-unused-vars
+  79:10  warning  'step' is defined but never used         no-unused-vars
+  82:10  warning  'resetSim' is defined but never used     no-unused-vars
+  83:10  warning  'downloadPNG' is defined but never used  no-unused-vars
+  84:10  warning  'downloadCSV' is defined but never used  no-unused-vars
+  85:10  warning  'saveRun' is defined but never used      no-unused-vars
+  86:10  warning  'loadRun' is defined but never used      no-unused-vars
+  94:10  warning  'toggleFS' is defined but never used     no-unused-vars
+
+✖ 8 problems (0 errors, 8 warnings)
+
