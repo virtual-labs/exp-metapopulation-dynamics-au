@@ -1,13 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Metapopulation Dynamics — Levins Model — Simulation</title>
+<link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-		<!-- Your code goes here-->
+<div class="card" id="simbox"><div class="simbar"><span class="simbar-logo" aria-hidden="true"><img src="images\logo.svg" alt="Amrita Vishwa Vidyapeetham"></span><h1 class="simbar-title">Metapopulation Dynamics — Levins Model</h1><button class="fs-btn" id="fsBtn" onclick="toggleFS()" title="Toggle full screen" aria-label="Toggle full screen">⛶</button></div>
+      <div class="sim">
+        <div class="controls">
+          <div class="field"><label>Model</label>
+            <select id="model" onchange="switchModel()">
+              <option value="0">Levins Model (patch occupancy)</option>
+              <option value="1">Metapopulation Stability (two patches)</option>
+            </select>
+          </div>
+          <div class="cset active" data-c="0">
+            <div class="field"><label>Total patches (h) <span class="val" id="v_h">10</span></label><input type="range" id="h" min="4" max="40" value="10" oninput="sync()"></div>
+            <div class="field"><label>Colonization rate (c) <span class="val" id="v_c">0.1</span></label><input type="range" id="c" min="0.02" max="0.5" step="0.01" value="0.1" oninput="sync()"></div>
+            <div class="field"><label>Initial occupied (P₀) <span class="val" id="v_ip">1</span></label><input type="range" id="ip" min="1" max="20" value="1" oninput="sync()"></div>
+            <div class="field"><label>Extinction floor (e) <span class="val" id="v_e">0.04</span></label><input type="range" id="e" min="0" max="2" step="0.02" value="0.04" oninput="sync()"></div>
+            <div class="field"><label>Number of years <span class="val" id="v_t">20</span></label><input type="range" id="t" min="5" max="80" value="20" oninput="sync()"></div>
+          </div>
+          <div class="cset" data-c="1">
+            <div class="field"><label>Initial population per patch (n) <span class="val" id="v_n">50</span></label><input type="range" id="n" min="5" max="200" value="50" oninput="sync()"></div>
+            <div class="field"><label>Dispersal fraction (d) <span class="val" id="v_disp">0.25</span></label><input type="range" id="disp" min="0" max="0.5" step="0.01" value="0.25" oninput="sync()"></div>
+            <div class="field"><label>Good-year rate (r_good) <span class="val" id="v_rg">1.25</span></label><input type="range" id="rgood" min="1" max="2" step="0.05" value="1.25" oninput="sync()"></div>
+            <div class="field"><label>Bad-year rate (r_bad) <span class="val" id="v_rb">0.75</span></label><input type="range" id="rbad" min="0.2" max="1" step="0.05" value="0.75" oninput="sync()"></div>
+            <div class="field"><label>Independent patch years <span class="val" id="v_idp">Yes</span></label><input type="range" id="idp" min="0" max="1" value="1" oninput="sync()"><div class="hint">1 = patches roll good/bad years independently (risk spreading).</div></div>
+            <div class="field"><label>Number of years <span class="val" id="v_runlen">30</span></label><input type="range" id="runlen" min="5" max="100" value="30" oninput="sync()"></div>
+          </div>
+          <div class="btnrow">
+            <button class="btn btn-primary" onclick="run()">▶ Run</button>
+            <button class="btn btn-ghost" onclick="play()" id="playBtn">Play ▶</button>
+            <button class="btn btn-ghost" onclick="step()">Step ⏭</button>
+            <button class="btn btn-ghost" onclick="resetSim()">↺ Reset</button>
+          </div>
+          <div class="dl-label">Download</div>
+<div class="btnrow">
+            <button class="btn btn-accent" onclick="downloadPNG()">⤓ PNG</button>
+            <button class="btn btn-accent" onclick="downloadCSV()">⤓ CSV</button>
+          </div>
+        </div>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+        <div class="plotwrap">
+          <canvas class="field" id="field" width="720" height="260"></canvas>
+<div class="counts" id="counts"></div>
+<div class="plot-title" id="plotTitle">Levins model — occupied patches over time</div>
+          <canvas class="chart" id="chart" width="720" height="400"></canvas>
+          <div class="legend" id="legend"></div>
+          
+          
+          <div class="readout" id="readout"></div>
+        </div>
+      </div>
+    </div>
+<div class="toast" id="toast"></div>
+<script src="./js/main.js"></script>
 </body>
 </html>
